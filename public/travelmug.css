@@ -1,0 +1,121 @@
+:root {
+  --orange: #ff8b00;
+  --white: #fbfbfb;
+  --white-bg: #f6f6f6;
+  --black: #010101;
+  --green: #03c04a;
+  --yellow: #ece75f;
+  --disabled-green: #03c04c86;
+  --disabled-yellow: #ece75f3d;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--orange);
+  padding: 20px 30px;
+}
+
+.navbar h1 {
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.searchbar-container {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.searchbar-container input {
+  padding: 3px 5px;
+  color: var(--black);
+  border: 2px solid var(--black);
+}
+
+.searchbar-container input:focus {
+  border-color: var(--black);
+}
+
+.searchbar-container {
+  background-color: var(--white);
+}
+
+.orders-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--white-bg);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 1200px; /* Adjusted width for a better layout */
+  margin: auto;
+}
+
+input[type="number"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--orange);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--disabled-green);
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.orders-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.order-details {
+  background-color: var(--white);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--orange);
+}
+
+.order-details h3,
+.order-details h4 {
+  margin: 10px 0;
+}
+
+.order-details ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.order-details li {
+  margin: 5px 0;
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.order-details li:last-child {
+  border-bottom: none;
+}
